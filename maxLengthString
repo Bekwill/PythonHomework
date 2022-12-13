@@ -1,0 +1,13 @@
+#find maxLengthString from input strings
+
+string = []
+for i in range(5):
+    x = input()
+    string.append(x)
+    
+maxLengthNumber = len(string[0])    
+for i in string:
+    if maxLengthNumber < len(i):
+        maxLengthNumber = len(i)
+        
+print(maxLengthNumber)   
