@@ -1,0 +1,42 @@
+#find maxLengthString from input strings
+
+string = []
+for i in range(5):
+    x = input()
+    string.append(x)
+    
+maxLengthNumber = len(string[0])    
+for i in string:
+    if maxLengthNumber < len(i):
+        maxLengthNumber = len(i)
+        
+print(maxLengthNumber)   
+
+
+
+# find max integer number from list
+def finding_max_integer(list1 = []):
+    
+    maxNumber = list1[0]  
+    for i in list1:
+        if maxNumber < i:
+            maxNumber = i
+        
+    print(maxNumber)    
+    
+lst =  [5,25,625,3,9,81,10,100,1000]
+finding_max_integer(lst)
+
+
+#Function to find Factorial of n
+
+def find_factorial(n):
+    
+    if n == 1:
+        return 1
+    return n*find_factorial(n-1)
+    
+number = int(input("Please enter number to find factorial thereof: "))
+x = find_factorial(number)
+
+print(f'factorial of {number} is {x}')
