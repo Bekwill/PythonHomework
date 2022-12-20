@@ -1,0 +1,28 @@
+#Wrire a program which reads numbers from file and returns the maxNumber in the same file
+f = open("File1", "r+")
+newList = [number[:len(number)-1] for number in f]
+f.write(max(newList[0:10]))
+
+
+
+
+#Write function which gets dict as a parameter and returns max of value thereof
+
+def max_value(dict1):
+    return min(dict1.values())
+
+dict_example = {"water": 1,
+                "Cola" : 2,
+                "redbull": 4}
+print(max_value(dict_example))
+
+
+
+#Write function which fills set with unique elements from another file
+
+def read_file(adress):
+    f = open(adress, "r")
+    newSet = {line[:-1] for line in f}
+    return newSet
+
+print(read_file("./File1"))
